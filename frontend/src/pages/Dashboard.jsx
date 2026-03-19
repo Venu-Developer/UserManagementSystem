@@ -137,7 +137,8 @@ export default function Dashboard() {
       src={
         user.profileImage.startsWith("blob")
           ? user.profileImage
-          : `http://localhost:5000${user.profileImage}`
+          // : `http://localhost:5000${user.profileImage}`
+          :`https://usermanagementsystem-venu-developer.onrender.com${user.profileImage}`
       }
       className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
       alt="Profile"
