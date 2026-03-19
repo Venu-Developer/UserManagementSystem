@@ -3,7 +3,7 @@ import { API } from "../api/api.js";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext.jsx";
-
+import { FaUserCircle } from "react-icons/fa";
 export default function Dashboard() {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
@@ -12,8 +12,7 @@ export default function Dashboard() {
   const { logout } = useContext(AuthContext);
   const nav = useNavigate();
 
-  const defaultImg =
-    "https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff";
+ 
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -130,30 +129,23 @@ export default function Dashboard() {
               {/* Profile Image */}
               <div className="flex flex-col items-center">
                 <label className="cursor-pointer relative group">
-                  <div className="relative">
-                    <img
-                      src={
-                        user.profileImage
-                          ? user.profileImage.startsWith("blob")
-                            ? user.profileImage
-                            : `http://localhost:5000${user.profileImage}`
-                          : defaultImg
-                      }
-                      className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg group-hover:opacity-90 transition-opacity"
-                      alt="Profile"
-                    />
-                    
-                    {/* Upload overlay */}
-                    <div className="absolute inset-0 bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <span className="text-white text-sm font-medium">Change</span>
-                    </div>
+                 
 
-                    {uploading && (
-                      <div className="absolute inset-0 bg-black/60 rounded-full flex items-center justify-center">
-                        <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      </div>
-                    )}
-                  </div>
+<div className="relative">
+  {user?.profileImage && user?.profileImage!=null ? (
+    <img
+      src={
+        user.profileImage.startsWith("blob")
+          ? user.profileImage
+          : `http://localhost:5000${user.profileImage}`
+      }
+      className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+      alt="Profile"
+    />
+  ) : (
+    <FaUserCircle className="w-32 h-32 text-gray-400" />
+  )}
+</div>
                   
                   <input 
                     type="file" 

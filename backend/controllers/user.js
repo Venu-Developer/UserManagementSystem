@@ -25,13 +25,13 @@ export const updateProfile = async (req, res) => {
     if (data.email) updateData.email = data.email;
     if (data.gender) updateData.gender = data.gender;
 
-    // ✅ DOB → age
+    //  DOB → age
     if (data.dob) {
       updateData.dob = data.dob;
       updateData.age = calculateAge(data.dob);
     }
 
-    // ✅ image upload
+    //  image upload
     if (req.file) {
       updateData.profileImage = `/uploads/${req.file.filename}`;
     }

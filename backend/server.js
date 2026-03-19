@@ -6,6 +6,7 @@ import cors from "cors";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/user.js";
 import path from "path";
+import fs from 'fs';
 
 dotenv.config();
 

@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   age: { type: Number },
    profileImage: {
     type: String,
-    default: "https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff"
+    default:null
   }
 }, { timestamps: true });
 
