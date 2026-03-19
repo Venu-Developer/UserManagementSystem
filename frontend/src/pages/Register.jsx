@@ -79,7 +79,7 @@ export default function Register() {
       {/* Simple card */}
       <div className="w-full max-w-md">
         {/* Header with back button */}
-        <div className="mb-6 flex items-center gap-4">
+        {/* <div className="mb-6 flex items-center gap-4">
           <button
             onClick={() => nav(-1)}
             className="w-10 h-10 flex items-center justify-center rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow text-gray-600 hover:text-gray-900"
@@ -90,7 +90,7 @@ export default function Register() {
             <h2 className="text-2xl font-semibold text-gray-900">Create account</h2>
             <p className="text-gray-500 text-sm mt-1">Please fill in your details</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Form card */}
         <div className="bg-white rounded-2xl shadow-xl p-8">

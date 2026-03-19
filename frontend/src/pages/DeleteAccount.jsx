@@ -118,11 +118,11 @@ export default function DeleteAccount() {
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <span className="text-red-400">•</span>
-              <span>Your profile and posts will be deleted</span>
+              <span>Your profile  will be deleted</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <span className="text-red-400">•</span>
-              <span>You'll lose access to all services</span>
+              <span>You'll lose access </span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <span className="text-red-400">•</span>
