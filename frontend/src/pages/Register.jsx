@@ -79,7 +79,7 @@ export default function Register() {
       {/* Simple card */}
       <div className="w-full max-w-md">
         {/* Header with back button */}
-        <div className="mb-6 flex items-center gap-4">
+        <div className="mb-6 flex items-center justify-center gap-4">
           {/* <button
             onClick={() => nav(-1)}
             className="w-10 h-10 flex items-center justify-center rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow text-gray-600 hover:text-gray-900"
