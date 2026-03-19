@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.get("/", (req,res)=>res.send("API running"));
 
-app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
+app.use("/auth", authRoutes);
+app.use("/user", userRoutes);
 
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
